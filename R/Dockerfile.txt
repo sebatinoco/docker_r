@@ -1,0 +1,39 @@
+# Utiliza una imagen base de Ubuntu 20.04 LTS
+FROM ubuntu:20.04
+
+# Actualiza el sistema e instala dependencias
+RUN apt-get update && \
+    apt-get install -y software-properties-common && \
+    add-apt-repository universe && \
+    apt-get update && \
+    apt-get install -y \
+        python3-pip \
+        python3-dev \
+        libmysqlclient-dev \
+        libssl-dev \
+        libcurl4-openssl-dev \
+        libxml2-dev \
+        libcairo2-dev \
+        libsqlite3-dev \
+        curl \
+        r-base && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
+# Instala Apache Airflow usando pip
+RUN pip3 install apache-airflow
+
+# Establece el entorno de trabajo de R
+ENV PATH="/usr/bin/R:${PATH}"
+
+# Instala paquetes de R según sea necesario
+RUN R -e "install.packages(c('httr', 'ggplot2'), repos = 'http://cran.us.r-project.org')"
+
+# Configura Apache Airflow
+RUN airflow db init
+
+# Expón el puerto 8080 para la interfaz web de Apache Airflow (ajusta según sea necesario)
+EXPOSE 8080
+
+# Comando para iniciar Apache Airflow (ajusta según sea necesario)
+#CMD ["airflow", "webserver"]

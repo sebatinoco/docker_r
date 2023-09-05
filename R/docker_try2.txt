@@ -1,0 +1,16 @@
+# Base image https://hub.docker.com/r/rocker/rstudio
+FROM rocker/tidyverse:4.0.1
+
+USER root
+
+RUN pip install apache-airflow
+
+RUN apt-get update -y
+RUN apt-get install r-base-core libssl-dev libcurl4-openssl-dev
+RUN apt-get install -y r-cran-httr
+RUN chmod u+x ./scripts/run_r.sh
+
+RUN mkdir ./packages
+
+##Install R packages
+RUN R -e "install.packages(c('httr', 'jsonlite'), './packages', repos = 'http://cran.us.r-project.org')"

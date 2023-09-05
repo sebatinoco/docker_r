@@ -1,0 +1,32 @@
+[2023-09-05 00:32:36,500] {processor.py:153} INFO - Started process (PID=1045) to work on /opt/airflow/dags/my_first_dag.py
+[2023-09-05 00:32:36,506] {processor.py:641} INFO - Processing file /opt/airflow/dags/my_first_dag.py for tasks to queue
+[2023-09-05 00:32:36,514] {logging_mixin.py:115} INFO - [2023-09-05 00:32:36,513] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/my_first_dag.py
+[2023-09-05 00:32:36,673] {logging_mixin.py:115} INFO - cwd: /opt/airflow/scripts/
+[2023-09-05 00:32:36,707] {processor.py:651} INFO - DAG(s) dict_keys(['my_dag_id']) retrieved from /opt/airflow/dags/my_first_dag.py
+[2023-09-05 00:32:38,087] {logging_mixin.py:115} INFO - [2023-09-05 00:32:38,087] {dag.py:2371} INFO - Sync 1 DAGs
+[2023-09-05 00:32:39,480] {logging_mixin.py:115} INFO - [2023-09-05 00:32:39,470] {dag.py:2919} INFO - Setting next_dagrun for my_dag_id to None, run_after=None
+[2023-09-05 00:32:39,583] {processor.py:161} INFO - Processing /opt/airflow/dags/my_first_dag.py took 3.176 seconds
+[2023-09-05 00:57:40,347] {processor.py:153} INFO - Started process (PID=1084) to work on /opt/airflow/dags/my_first_dag.py
+[2023-09-05 00:57:40,353] {processor.py:641} INFO - Processing file /opt/airflow/dags/my_first_dag.py for tasks to queue
+[2023-09-05 00:57:40,355] {logging_mixin.py:115} INFO - [2023-09-05 00:57:40,355] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/my_first_dag.py
+[2023-09-05 00:57:40,371] {logging_mixin.py:115} INFO - cwd: /opt/airflow/scripts/
+[2023-09-05 00:57:40,381] {processor.py:651} INFO - DAG(s) dict_keys(['my_dag_id']) retrieved from /opt/airflow/dags/my_first_dag.py
+[2023-09-05 00:57:40,500] {logging_mixin.py:115} INFO - [2023-09-05 00:57:40,500] {dag.py:2371} INFO - Sync 1 DAGs
+[2023-09-05 00:57:40,574] {logging_mixin.py:115} INFO - [2023-09-05 00:57:40,570] {dag.py:2919} INFO - Setting next_dagrun for my_dag_id to None, run_after=None
+[2023-09-05 00:57:40,680] {processor.py:161} INFO - Processing /opt/airflow/dags/my_first_dag.py took 0.337 seconds
+[2023-09-05 00:58:10,843] {processor.py:153} INFO - Started process (PID=1137) to work on /opt/airflow/dags/my_first_dag.py
+[2023-09-05 00:58:10,846] {processor.py:641} INFO - Processing file /opt/airflow/dags/my_first_dag.py for tasks to queue
+[2023-09-05 00:58:10,850] {logging_mixin.py:115} INFO - [2023-09-05 00:58:10,849] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/my_first_dag.py
+[2023-09-05 00:58:10,866] {logging_mixin.py:115} INFO - cwd: /opt/airflow/scripts/
+[2023-09-05 00:58:10,873] {processor.py:651} INFO - DAG(s) dict_keys(['my_dag_id']) retrieved from /opt/airflow/dags/my_first_dag.py
+[2023-09-05 00:58:10,928] {logging_mixin.py:115} INFO - [2023-09-05 00:58:10,927] {dag.py:2371} INFO - Sync 1 DAGs
+[2023-09-05 00:58:10,986] {logging_mixin.py:115} INFO - [2023-09-05 00:58:10,985] {dag.py:2919} INFO - Setting next_dagrun for my_dag_id to None, run_after=None
+[2023-09-05 00:58:11,017] {processor.py:161} INFO - Processing /opt/airflow/dags/my_first_dag.py took 0.184 seconds
+[2023-09-05 00:58:41,160] {processor.py:153} INFO - Started process (PID=1202) to work on /opt/airflow/dags/my_first_dag.py
+[2023-09-05 00:58:41,163] {processor.py:641} INFO - Processing file /opt/airflow/dags/my_first_dag.py for tasks to queue
+[2023-09-05 00:58:41,166] {logging_mixin.py:115} INFO - [2023-09-05 00:58:41,165] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/my_first_dag.py
+[2023-09-05 00:58:41,182] {logging_mixin.py:115} INFO - cwd: /opt/airflow/scripts/
+[2023-09-05 00:58:41,197] {processor.py:651} INFO - DAG(s) dict_keys(['my_dag_id']) retrieved from /opt/airflow/dags/my_first_dag.py
+[2023-09-05 00:58:41,286] {logging_mixin.py:115} INFO - [2023-09-05 00:58:41,286] {dag.py:2371} INFO - Sync 1 DAGs
+[2023-09-05 00:58:41,349] {logging_mixin.py:115} INFO - [2023-09-05 00:58:41,349] {dag.py:2919} INFO - Setting next_dagrun for my_dag_id to None, run_after=None
+[2023-09-05 00:58:41,376] {processor.py:161} INFO - Processing /opt/airflow/dags/my_first_dag.py took 0.221 seconds

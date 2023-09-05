@@ -1,0 +1,11 @@
+FROM apache/airflow:2.3.0
+
+USER root
+
+RUN apt-get update && apt-get install -y r-base
+RUN apt-get install r-base-core libssl-dev libcurl4-openssl-dev
+RUN chmod u+x ./scripts/run_r.sh
+
+RUN R -e "install.packages('r-cran-httr', repos = 'http://cran.us.r-project.org')"
+
+#RUN R -e "install.packages('xgboost')"

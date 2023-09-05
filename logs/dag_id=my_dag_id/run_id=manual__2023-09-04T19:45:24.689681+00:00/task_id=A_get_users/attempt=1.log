@@ -1,0 +1,34 @@
+[2023-09-04 19:45:25,828] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: my_dag_id.A_get_users manual__2023-09-04T19:45:24.689681+00:00 [queued]>
+[2023-09-04 19:45:25,842] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: my_dag_id.A_get_users manual__2023-09-04T19:45:24.689681+00:00 [queued]>
+[2023-09-04 19:45:25,844] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-09-04 19:45:25,845] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2023-09-04 19:45:25,846] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-09-04 19:45:25,865] {taskinstance.py:1377} INFO - Executing <Task(BashOperator): A_get_users> on 2023-09-04 19:45:24.689681+00:00
+[2023-09-04 19:45:25,870] {standard_task_runner.py:52} INFO - Started process 114 to run task
+[2023-09-04 19:45:25,875] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'my_dag_id', 'A_get_users', 'manual__2023-09-04T19:45:24.689681+00:00', '--job-id', '15', '--raw', '--subdir', 'DAGS_FOLDER/my_first_dag.py', '--cfg-path', '/tmp/tmp9y5gq_zk', '--error-file', '/tmp/tmppz8grg50']
+[2023-09-04 19:45:25,876] {standard_task_runner.py:80} INFO - Job 15: Subtask A_get_users
+[2023-09-04 19:45:25,993] {task_command.py:369} INFO - Running <TaskInstance: my_dag_id.A_get_users manual__2023-09-04T19:45:24.689681+00:00 [running]> on host 6f56bd00cbd4
+[2023-09-04 19:45:26,091] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=your_name
+AIRFLOW_CTX_DAG_ID=my_dag_id
+AIRFLOW_CTX_TASK_ID=A_get_users
+AIRFLOW_CTX_EXECUTION_DATE=2023-09-04T19:45:24.689681+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-09-04T19:45:24.689681+00:00
+[2023-09-04 19:45:26,093] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2023-09-04 19:45:26,095] {subprocess.py:74} INFO - Running command: ['bash', '-c', '/opt/***/scripts/run_r.sh /opt/***/scripts/A_task.R ']
+[2023-09-04 19:45:26,109] {subprocess.py:85} INFO - Output:
+[2023-09-04 19:45:26,118] {subprocess.py:92} INFO - bash: /opt/***/scripts/run_r.sh: /usr/bin/env: bad interpreter: Permission denied
+[2023-09-04 19:45:26,119] {subprocess.py:96} INFO - Command exited with return code 126
+[2023-09-04 19:45:26,138] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/bash.py", line 195, in execute
+    f'Bash command failed. The command returned a non-zero exit code {result.exit_code}.'
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 126.
+[2023-09-04 19:45:26,144] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=my_dag_id, task_id=A_get_users, execution_date=20230904T194524, start_date=20230904T194525, end_date=20230904T194526
+[2023-09-04 19:45:26,162] {standard_task_runner.py:97} ERROR - Failed to execute job 15 for task A_get_users (Bash command failed. The command returned a non-zero exit code 126.; 114)
+[2023-09-04 19:45:26,211] {local_task_job.py:156} INFO - Task exited with return code 1
+[2023-09-04 19:45:26,277] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
